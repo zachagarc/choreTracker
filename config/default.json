@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://zachagarc:bbmycsat@cluster0-vvtex.mongodb.net/choretracker?retryWrites=true&w=majority"
-
+    "mongoURI": "mongodb+srv://zachagarc:bbmycsat@cluster0-vvtex.mongodb.net/choretracker?retryWrites=true&w=majority",
+    "secret": "niwikugget"
 }
