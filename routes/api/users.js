@@ -28,10 +28,13 @@ router.post('/', [
     try {
         const {name, email, password} = req.body;
         const errors = validationResult(req);
+        if(!errors.isEmpty()) {
+            return res.status(400).json(errors);
+        }
         // Check if the email is already in the database
         let user = await User.findOne({email: email});
         if(user) {
-            res.status(400).json({errors: [{msg: "User already exists"}]});
+            return res.status(400).json({errors: [{msg: "User already exists"}]});
         }
 
         // Create new user if its not in the database
